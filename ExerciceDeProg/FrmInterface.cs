@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ExerciceDeProg
 {
-    public partial class Form1 : Form
+    public partial class FrmInterface : Form
     {
-        public Form1()
+        public FrmInterface()
         {
             InitializeComponent();
+        }
+
+        private void btnBrasser_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
