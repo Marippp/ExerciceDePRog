@@ -8,6 +8,23 @@ namespace ExerciceDeProg
 {
     internal class Controleur
     {
-        Enum choixDeType;
+        private string typeDeDeChoisi = "";
+        Dictionary<int, string> dictionnaireType = new Dictionary<int, string>();
+        public Controleur()
+        {
+            dictionnaireType.Add(1, "Ordinaire");
+            dictionnaireType.Add(2, "Pipé");
+
+        }
+        public string ChoixTypeAuHasard(string typeDeDeChoisi)
+        {
+            if (typeDeDeChoisi == dictionnaireType[0])
+            {
+                return "Ordinaire";
+            }
+
+            return "Pipé";
+        }
+        
     }
 }
