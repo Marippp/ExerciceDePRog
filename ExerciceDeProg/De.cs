@@ -11,14 +11,12 @@ namespace ExerciceDeProg
         protected const int nombreDeFaces = 6;
         private string typeDeDe;
 
-        public string TypeDeDe { get => typeDeDe;  }
+        public string TypeDeDe { get => typeDeDe; set => typeDeDe = value; }
 
         public De()
         {
             
         }
-
-
         public virtual int Brasser()
         {
             Random random = new Random();
