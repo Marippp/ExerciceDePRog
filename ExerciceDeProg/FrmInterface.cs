@@ -12,7 +12,7 @@ namespace ExerciceDeProg
 {
     public partial class FrmInterface : Form
     {
-        Controleur controleur = new Controleur();
+        Controleur controleur = new Controleur(0);
         public FrmInterface()
         {
             InitializeComponent();
@@ -28,8 +28,9 @@ namespace ExerciceDeProg
         public void AfficherInfoDansTextBox()
         {
             lblAfficherType.Text = controleur.TypeDeDeChoisi();
-            lblAfficherTotalPoints.Text = (controleur.BrasserTypeDeDeChoisi()).ToString();
-            //Afficher valeur quand je vais savoir c'est quoi
+            lblAfficherValeur.Text = (controleur.BrasserTypeDeDeChoisi()).ToString();
+            lblAfficherTotalPoints.Text = (controleur.CalculerTotalDesPoints()).ToString();
+
         }
         private void FrmInterface_Load(object sender, EventArgs e)
         {

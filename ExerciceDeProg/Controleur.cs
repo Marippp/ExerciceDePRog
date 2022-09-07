@@ -11,10 +11,10 @@ namespace ExerciceDeProg
         public string typeDeDeChoisi = "";
         DeOrdinaire deOrdinaire = new DeOrdinaire();
         DePipe dePipe = new DePipe();
-
-        public Controleur()
+        private int totalDesPoints;
+        public Controleur(int totalDesPoints)
         {
-            
+            this.totalDesPoints = totalDesPoints;
         }
 
         public string TypeDeDeChoisi()
@@ -42,6 +42,11 @@ namespace ExerciceDeProg
             {
                 return dePipe.Brasser();
             }
+        }
+
+        public int CalculerTotalDesPoints()
+        {
+            return totalDesPoints += BrasserTypeDeDeChoisi();
         }
     }
 }
