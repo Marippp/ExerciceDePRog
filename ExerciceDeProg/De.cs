@@ -11,7 +11,7 @@ namespace ExerciceDeProg
         protected const int nombreDeFaces = 6;
         private string typeDeDe;
 
-        public string TypeDeDe { get => typeDeDe; set => typeDeDe = value; }
+        public string TypeDeDe { get => typeDeDe;  }
 
         public De()
         {

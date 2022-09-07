@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExerciceDeProg
 {
-    internal class Controleur
+    public class Controleur
     {
         public string typeDeDeChoisi = "";
         DeOrdinaire deOrdinaire = new DeOrdinaire();
