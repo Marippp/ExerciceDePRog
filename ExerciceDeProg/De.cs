@@ -9,11 +9,16 @@ namespace ExerciceDeProg
     public abstract class De
     {
         protected const int nombreDeFaces = 6;
-        public string typeDeDe;
-        public De(string typeDeDe)
+        private string typeDeDe;
+
+        public string TypeDeDe { get => typeDeDe; set => typeDeDe = value; }
+
+        public De()
         {
-            this.typeDeDe = "";
+            
         }
+
+
         public virtual int Brasser()
         {
             Random random = new Random();

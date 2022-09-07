@@ -22,11 +22,18 @@ namespace ExerciceDeProg
         {
             controleur.TypeDeDeChoisi();
             controleur.BrasserTypeDeDeChoisi();
+            AfficherInfoDansTextBox();
         }
 
+        public void AfficherInfoDansTextBox()
+        {
+            lblAfficherType.Text = controleur.TypeDeDeChoisi();
+            lblAfficherTotalPoints.Text = (controleur.BrasserTypeDeDeChoisi()).ToString();
+            //Afficher valeur quand je vais savoir c'est quoi
+        }
         private void FrmInterface_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
