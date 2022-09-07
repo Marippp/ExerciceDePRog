@@ -9,9 +9,9 @@ namespace ExerciceDeProg
     public class DePipe : De
     {
 
-        public DePipe(string typeDeDe):base(typeDeDe)
+        public DePipe():base()
         {
-            typeDeDe = "Pipé";
+            
         }
 
         public override int Brasser()

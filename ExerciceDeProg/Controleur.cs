@@ -9,13 +9,12 @@ namespace ExerciceDeProg
     internal class Controleur
     {
         public string typeDeDeChoisi = "";
-        Dictionary<int, string> dictionnaireType = new Dictionary<int, string>();
-        DeOrdinaire deOrdinaire = new DeOrdinaire("Ordinaire");
-        DePipe dePipe = new DePipe("Pipé");
-
-        public Controleur()
+        DeOrdinaire deOrdinaire = new DeOrdinaire();
+        DePipe dePipe = new DePipe();
+        private int totalDesPoints;
+        public Controleur(int totalDesPoints)
         {
-            
+            this.totalDesPoints = totalDesPoints;
         }
 
         public string TypeDeDeChoisi()
@@ -24,24 +23,30 @@ namespace ExerciceDeProg
             int choixDeType = random.Next(1, 3);
             if (choixDeType == 1)
             {
-                return deOrdinaire.typeDeDe;
+                return deOrdinaire.TypeDeDe = "Ordinaire";
             }
             else
             {
-                return dePipe.typeDeDe;
+                return dePipe.TypeDeDe = "Pipé";
             }
         }
 
-        public void BrasserTypeDeDeChoisi()
+        public int BrasserTypeDeDeChoisi()
         {
+
             if (TypeDeDeChoisi() == "Ordinaire")
             {
-                deOrdinaire.Brasser();
+                return deOrdinaire.Brasser();
             }
             else
             {
-                dePipe.Brasser();
+                return dePipe.Brasser();
             }
+        }
+
+        public int CalculerTotalDesPoints()
+        {
+            return totalDesPoints += BrasserTypeDeDeChoisi();
         }
     }
 }

@@ -8,9 +8,9 @@ namespace ExerciceDeProg
 {
     public class DeOrdinaire : De
     {
-        public DeOrdinaire(string typeDeDe): base(typeDeDe)
+        public DeOrdinaire(): base()
         {
-            typeDeDe = "Ordinaire";
+            
         }
 
         public override int Brasser()
