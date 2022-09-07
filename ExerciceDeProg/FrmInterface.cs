@@ -12,12 +12,19 @@ namespace ExerciceDeProg
 {
     public partial class FrmInterface : Form
     {
+        Controleur controleur = new Controleur();
         public FrmInterface()
         {
             InitializeComponent();
         }
 
         private void btnBrasser_Click(object sender, EventArgs e)
+        {
+            controleur.TypeDeDeChoisi();
+            controleur.BrasserTypeDeDeChoisi();
+        }
+
+        private void FrmInterface_Load(object sender, EventArgs e)
         {
 
         }

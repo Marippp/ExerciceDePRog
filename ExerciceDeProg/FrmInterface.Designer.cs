@@ -50,6 +50,7 @@
             this.Controls.Add(this.btnBrasser);
             this.Name = "FrmInterface";
             this.Text = "Interface";
+            this.Load += new System.EventHandler(this.FrmInterface_Load);
             this.ResumeLayout(false);
 
         }

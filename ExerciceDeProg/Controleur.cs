@@ -8,23 +8,40 @@ namespace ExerciceDeProg
 {
     internal class Controleur
     {
-        private string typeDeDeChoisi = "";
+        public string typeDeDeChoisi = "";
         Dictionary<int, string> dictionnaireType = new Dictionary<int, string>();
+        DeOrdinaire deOrdinaire = new DeOrdinaire("Ordinaire");
+        DePipe dePipe = new DePipe("Pipé");
+
         public Controleur()
         {
-            dictionnaireType.Add(1, "Ordinaire");
-            dictionnaireType.Add(2, "Pipé");
-
+            
         }
-        public string ChoixTypeAuHasard(string typeDeDeChoisi)
+
+        public string TypeDeDeChoisi()
         {
-            if (typeDeDeChoisi == dictionnaireType[0])
+            Random random = new Random();
+            int choixDeType = random.Next(1, 3);
+            if (choixDeType == 1)
             {
-                return "Ordinaire";
+                return deOrdinaire.typeDeDe;
             }
-
-            return "Pipé";
+            else
+            {
+                return dePipe.typeDeDe;
+            }
         }
-        
+
+        public void BrasserTypeDeDeChoisi()
+        {
+            if (TypeDeDeChoisi() == "Ordinaire")
+            {
+                deOrdinaire.Brasser();
+            }
+            else
+            {
+                dePipe.Brasser();
+            }
+        }
     }
 }

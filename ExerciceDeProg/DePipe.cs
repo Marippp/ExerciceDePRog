@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ExerciceDeProg
 {
-    public class DePipe : DeOrdinaire
+    public class DePipe : De
     {
-        public new const string typeDeDe = "Pipé";
 
-        public DePipe():base()
+        public DePipe(string typeDeDe):base(typeDeDe)
         {
-
+            typeDeDe = "Pipé";
         }
 
         public override int Brasser()

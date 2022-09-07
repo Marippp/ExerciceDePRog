@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace ExerciceDeProg
 {
-    public class DeOrdinaire : De
+    public abstract class De
     {
-        public DeOrdinaire(string typeDeDe): base(typeDeDe)
+        protected const int nombreDeFaces = 6;
+        public string typeDeDe;
+        public De(string typeDeDe)
         {
-            typeDeDe = "Ordinaire";
+            this.typeDeDe = "";
         }
-
-        public override int Brasser()
+        public virtual int Brasser()
         {
             Random random = new Random();
 
